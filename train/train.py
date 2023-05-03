@@ -140,6 +140,7 @@ for epoch in range(1, EPOCHS + 1):
 	print('-' * 59)
 
 model_filename = 'ngram.pth'
+MODEL_DIR = os.environ.get('MODEL_DIR')
 model_fullpath = MODEL_DIR + '/' + model_filename
 torch.save(model.state_dict(), model_fullpath)
 # torch.save(model.state_dict(), './ngram.pt')
